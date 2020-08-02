@@ -1,6 +1,7 @@
-package org.example.cucumberstarter;
+package org.example.cucumberstarter.steps;
 
 import io.cucumber.spring.CucumberContextConfiguration;
+import org.example.cucumberstarter.TestConfig;
 import org.springframework.test.context.ContextConfiguration;
 
 @CucumberContextConfiguration
