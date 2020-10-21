@@ -10,18 +10,23 @@ repositories {
     mavenCentral()
 }
 
+ext {
+    springVersion = '2.3.1.RELEASE'
+    cucumberVersion = '6.3.0'
+    allureGradleVersion = '2.8.1'
+    allureCucumberJvmVersion = '2.13.6'
+}
+
 dependencies {
-    implementation group: 'io.cucumber', name: 'cucumber-spring', version: '6.3.0'
-    implementation group: 'io.cucumber', name: 'cucumber-java', version: '6.3.0'
+    implementation group: 'io.cucumber', name: 'cucumber-spring', version: "$cucumberVersion"
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: "$cucumberVersion"
 
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.3.1.RELEASE'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.3.1.RELEASE'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter', version: "$springVersion"
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: "$springVersion"
 
-    testImplementation group: 'io.qameta.allure', name: 'allure-gradle', version: '2.8.1'
-    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'io.qameta.allure', name: 'allure-gradle', version: "$allureGradleVersion"
 
-    testImplementation group: 'io.qameta.allure', name: 'allure-cucumber6-jvm', version: '2.13.6'
-
+    testImplementation group: 'io.qameta.allure', name: 'allure-cucumber6-jvm', version: "$allureCucumberJvmVersion"
 }
 
 allure {
